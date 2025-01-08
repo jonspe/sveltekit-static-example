@@ -11,7 +11,7 @@
 
 <ul>
     {#each data.comments as comment}
-        <li><b>{comment.name}</b><br>{comment.body}<br><span>{comment.email}</span></li>
+        <li><b>{comment.email}</b><br>{comment.body}<br></li>
     {/each}
 </ul>
 
