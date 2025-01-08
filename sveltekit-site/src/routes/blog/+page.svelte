@@ -1,6 +1,12 @@
+<script>
+    let { data } = $props();
+</script>
+
 <h1>Blog</h1>
 <ol>
-    <li><a href="/blog/one">blog post 1</a></li>
-    <li><a href="/blog/two">blog post 2</a></li>
-    <li><a href="/blog/three">blog post 3</a></li>
+    {#each data.summaries as {slug, title}}
+        <li>
+            <a href="/blog/{slug}">{title}</a>
+        </li>
+    {/each}
 </ol>
