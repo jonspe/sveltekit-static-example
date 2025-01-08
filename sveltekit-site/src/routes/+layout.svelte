@@ -9,8 +9,8 @@
     <div>
         <img id="logo" alt="" src="favicon.png" />
         <a href="/">Koti</a>
-        <a href="/components">Komponentit</a>
         <a href="/blog">Blogi</a>
+        <a href="/about">Tietoja</a>
     </div>
 </nav>
 
@@ -59,5 +59,9 @@
         max-width: 960px;
         margin: auto;
     }
+    :global(*::first-letter) {
+        text-transform: capitalize;
+    }
 </style>
+
 
