@@ -3,7 +3,7 @@
 </script>
 
 <h1>{data.post.title}</h1>
-<div>{@html data.post.body}</div>
+<div>{data.post.body}</div>
 
 <button onclick={() => history.back()}>&lt; Takaisin</button>
 
@@ -21,8 +21,5 @@
     }
     li {
         margin-bottom: 16px;
-    }
-    span {
-        text-align: right;
     }
 </style>
