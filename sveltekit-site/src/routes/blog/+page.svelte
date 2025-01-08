@@ -39,7 +39,6 @@
 
 <button onclick={previous}>Taakse</button>
 <button onclick={next}>Seuraava</button>
-{@debug currentPostIndex}
 
 <style>
     a:hover {
