@@ -1,5 +1,8 @@
 <script>
-    let { children } = $props();
+    import { fade } from "svelte/transition"
+    import { page } from '$app/state'
+
+    let { children } = $props()
 </script>
 
 <nav>
@@ -11,9 +14,11 @@
     </div>
 </nav>
 
-<main>
-    {@render children()}
-</main>
+{#key page.url.pathname}
+    <main in:fade>
+        {@render children()}
+    </main>
+{/key}
 
 <style>
     nav {

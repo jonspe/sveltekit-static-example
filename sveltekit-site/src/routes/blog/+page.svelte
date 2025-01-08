@@ -1,5 +1,26 @@
 <script>
-    let { data } = $props();
+    let { data } = $props()
+
+    const postsPerPage = 10
+    let currentPostIndex = $state(0)
+
+    let paginated = $derived(
+        data.summaries.slice(currentPostIndex, currentPostIndex + postsPerPage)
+    )
+
+    const previous = function() {
+        currentPostIndex = currentPostIndex - postsPerPage
+        if (currentPostIndex < 0) {
+            currentPostIndex = 0
+        }
+    }
+
+    const next = function() {
+        currentPostIndex = currentPostIndex + postsPerPage
+        if (currentPostIndex > data.summaries.length - postsPerPage) {
+            currentPostIndex = data.summaries.length - postsPerPage
+        }
+    }
 </script>
 
 <h1>Blogi</h1>
@@ -9,12 +30,16 @@
 </p>
 
 <ol>
-    {#each data.summaries as {slug, title}}
-        <li>
+    {#each paginated as {slug, title} (slug)}
+        <li value={slug}>
             <a href="/blog/{slug}">{title}</a>
         </li>
     {/each}
 </ol>
+
+<button onclick={previous}>Taakse</button>
+<button onclick={next}>Seuraava</button>
+{@debug currentPostIndex}
 
 <style>
     a:hover {
