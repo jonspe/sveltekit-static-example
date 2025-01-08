@@ -5,10 +5,9 @@
 <nav>
     <div>
         <img id="logo" alt="" src="favicon.png" />
-        <a href="/">Home</a>
-        <a href="/components">Components</a>
-        <a href="/blog">Blog</a>
-        <a href="/about">About</a>
+        <a href="/">Koti</a>
+        <a href="/components">Komponentit</a>
+        <a href="/blog">Blogi</a>
     </div>
 </nav>
 
