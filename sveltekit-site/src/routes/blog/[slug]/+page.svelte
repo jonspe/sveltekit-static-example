@@ -3,7 +3,7 @@
 </script>
 
 <h1>{data.post.title}</h1>
-<div>{data.post.body}</div>
+<section>{data.post.body}</section>
 
 <button onclick={() => history.back()}>&lt; Takaisin</button>
 
