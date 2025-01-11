@@ -15,7 +15,7 @@
 </nav>
 
 {#key page.url.pathname}
-    <main in:fade>
+    <main in:fade={{duration: 700}}>
         {@render children()}
     </main>
 {/key}
