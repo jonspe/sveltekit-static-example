@@ -6,6 +6,10 @@
   let { children } = $props()
 </script>
 
+<svelte:head>
+  <title>Staattinen SvelteKit Blogi</title>
+</svelte:head>
+
 <nav>
   <div>
     <img id="logo" alt="" src="favicon.png" />
@@ -16,7 +20,7 @@
 </nav>
 
 {#key page.url.pathname}
-  <main in:fade={{ duration: 700 }}>
+  <main in:fade={{ duration: 400 }}>
     {@render children()}
   </main>
 {/key}
