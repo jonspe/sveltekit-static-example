@@ -1,4 +1,6 @@
 <script>
+  import { base } from "$app/paths"
+
   let { data } = $props()
 
   const postsPerPage = 10
@@ -30,7 +32,7 @@
 <ol>
   {#each paginated as { slug, title } (slug)}
     <li value={slug}>
-      <a href="/blog/{slug}">{title}</a>
+      <a href="{base}/blog/{slug}">{title}</a>
     </li>
   {/each}
 </ol>

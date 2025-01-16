@@ -1,6 +1,7 @@
 <script>
   import { fade } from "svelte/transition"
   import { page } from "$app/state"
+  import { base } from "$app/paths"
 
   let { children } = $props()
 </script>
@@ -8,9 +9,9 @@
 <nav>
   <div>
     <img id="logo" alt="" src="favicon.png" />
-    <a href="/">Koti</a>
-    <a href="/blog">Blogi</a>
-    <a href="/about">Tietoja</a>
+    <a href="{base}/">Koti</a>
+    <a href="{base}/blog">Blogi</a>
+    <a href="{base}/about">Tietoja</a>
   </div>
 </nav>
 
