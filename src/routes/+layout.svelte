@@ -31,6 +31,7 @@
     height: 64px;
     box-shadow: 0 12px 12px 0px rgb(225, 225, 225);
     margin-bottom: 96px;
+    padding: 0 16px;
   }
   nav > div {
     margin: 0 auto 0 auto;
@@ -50,7 +51,6 @@
   a:hover {
     color: black;
   }
-
   :global(body) {
     margin: 0;
     background-color: #eee;
@@ -63,6 +63,7 @@
   main {
     max-width: 960px;
     margin: auto;
+    padding: 0 16px;
   }
   :global(*::first-letter) {
     text-transform: capitalize;
