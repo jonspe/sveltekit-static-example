@@ -8,6 +8,7 @@
 
 <svelte:head>
   <title>Staattinen SvelteKit Blogi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </svelte:head>
 
 <nav>
@@ -26,6 +27,10 @@
 {/key}
 
 <style>
+  :global(html),
+  :global(body) {
+    overflow-x: hidden;
+  }
   nav {
     background-color: white;
     height: 64px;
