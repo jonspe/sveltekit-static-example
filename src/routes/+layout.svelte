@@ -1,5 +1,4 @@
 <script>
-  import { fade } from "svelte/transition"
   import { page } from "$app/state"
   import { base } from "$app/paths"
 
@@ -20,11 +19,9 @@
   </div>
 </nav>
 
-{#key page.url.pathname}
-  <main in:fade={{ duration: 400 }}>
-    {@render children()}
-  </main>
-{/key}
+<main>
+  {@render children()}
+</main>
 
 <style>
   :global(html),
